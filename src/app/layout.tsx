@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: APP_DEFAULT_TITLE,
     description: APP_DESCRIPTION,
-    url: "https://laser-31.ru/",
+    url: "https://laser31.vercel.app/",
     siteName: APP_NAME,
     images: [
       {
