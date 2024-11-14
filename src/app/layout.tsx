@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   applicationName: APP_NAME,
   title: APP_DEFAULT_TITLE,
   description: APP_DESCRIPTION,
-  metadataBase: new URL("https://laser-31.ru/"),
+  metadataBase: new URL("https://laser31.vercel.app/"),
   keywords:
     "лазерная гравировка, гравировка металла, гравировка пластика, гравировка ювелирных изделий, гравировка ножей, персонализированные подарки, уникальные дизайны, гравировка город Губкин, гравировка Старый Оскол, гравировка Белгород",
-  authors: [{ name: "Артур", url: "https://laser-31.ru/" }],
+  authors: [{ name: "Артур", url: "https://laser31.vercel.app/" }],
   openGraph: {
     title: APP_DEFAULT_TITLE,
     description: APP_DESCRIPTION,
