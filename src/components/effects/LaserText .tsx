@@ -37,10 +37,13 @@
 // export default LaserText;
 
 import { motion } from "framer-motion";
+interface LaserTextProps {
+  text: string;
+}
 
 const letterAnimation = {
   hidden: { opacity: 0, y: 20 },
-  visible: (i) => ({
+  visible: (i: number) => ({
     opacity: 1,
     y: 0,
     transition: {
@@ -51,7 +54,7 @@ const letterAnimation = {
   }),
 };
 
-const LaserText = ({ text }) => {
+const LaserText: React.FC<LaserTextProps> = ({ text }) => {
   const letters = text.split("");
 
   const variants = {

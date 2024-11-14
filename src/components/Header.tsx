@@ -1,6 +1,6 @@
 import Image from "next/image";
 import bgImage from "../../public/img/header/02.jpg";
-import LaserText from "./effects/LaserText ";
+// import LaserText from "./effects/LaserText ";
 
 function Header() {
   return (
