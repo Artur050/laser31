@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: APP_NAME,
     images: [
       {
-        url: "https://laser-31.ru/your-image.jpg", // Путь к изображению
+        url: "/opengraph-image.png", // Путь к изображению
         width: 1200,
         height: 630,
         alt: "Лазерная гравировка",
