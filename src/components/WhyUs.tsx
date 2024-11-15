@@ -7,6 +7,7 @@ import Img1 from "../../public/main_center/Certificate.png";
 import Img2 from "../../public/main_center/HandCoins.png";
 import Img3 from "../../public/main_center/Package.png";
 import Img4 from "../../public/main_center/rub.png";
+import Image from "next/image";
 
 // const bgImg = {
 //   backgroundImage: `url(${FooterImg.src})`,
@@ -39,21 +40,49 @@ const Footer = () => {
           ></div> */}
           <div className="grid grid-cols-2 gap-6 place-items-center text-center ">
             <div>
-              <img src={Img1.src} alt="" className="w-[150px] md:w-[250px]" />
+              <Image
+                src={Img1.src}
+                alt=""
+                height={0}
+                width={150}
+                layout="intrinsic"
+                className="w-[150px] md:w-[250px]"
+              />
               <p className="text-white font-bold">Высокое качество</p>
             </div>
             <div>
-              <img src={Img2.src} alt="" className=" w-[150px] md:w-[250px]" />
+              <Image
+                src={Img2.src}
+                alt=""
+                height={0}
+                width={150}
+                layout="intrinsic"
+                className="w-[150px] md:w-[250px]"
+              />
               <p className="text-white font-bold">Доступные цены</p>
             </div>
             <div>
-              <img src={Img3.src} alt="" className=" w-[150px] md:w-[250px]" />
+              <Image
+                src={Img3.src}
+                alt=""
+                height={0}
+                width={150}
+                layout="intrinsic"
+                className="w-[150px] md:w-[250px]"
+              />
               <p className="text-white font-bold">
                 Скидки постоянным покупателям
               </p>
             </div>
             <div>
-              <img src={Img4.src} alt="" className=" w-[150px] md:w-[250px]" />
+              <Image
+                src={Img4.src}
+                alt=""
+                height={0}
+                width={150}
+                layout="intrinsic"
+                className="w-[150px] md:w-[250px]"
+              />
               <p className="text-white font-bold">Доставка по всей России</p>
             </div>
           </div>

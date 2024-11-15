@@ -8,6 +8,7 @@ import Img4 from "../../public/main/05.jpg";
 import { motion } from "framer-motion";
 import { SlideUp } from "../utility/animation";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 
 const ExploreData = [
   {
@@ -80,12 +81,14 @@ const Explore = () => {
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
                 key={data.id}
-                className="relative mb-3"
+                className="relative mb-3 h-auto"
               >
-                <img
+                <Image
                   src={data.image}
                   alt={data.title}
-                  className=" w-[200px] md:w-[350px] md:h-[500px] object-cover"
+                  width={350}
+                  height={500}
+                  className="object-cover h-[500px] "
                 />
                 <div className=" absolute w-full mb-5 bottom-0 inset-0 bg-brandDark/15">
                   <div className=" h-full space-y-1 py-6 flex flex-col justify-center text-center items-center">

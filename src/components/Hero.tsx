@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { FaPlay } from "react-icons/fa";
 import { motion } from "framer-motion";
 import LaserText from "./effects/LaserText ";
 
@@ -24,10 +23,13 @@ const Hero = () => {
           transition={{ duration: 1.5, delay: 0.5 }}
           className="container relative z-20 text-center space-y-8"
         >
-          <h1 className="text-6xl  md:text-8xl font-light uppercase">
+          <h1
+            className="text-6xl  md:text-8xl font-light uppercase"
+            style={{ fontFamily: "Play, sans-serif" }}
+          >
             <LaserText text="Лазер 31" />
           </h1>
-          <p>Лазерная гравировка на различных материалах и изделиях</p>
+          <h2>Лазерная гравировка на различных материалах и изделиях</h2>
           {/* <div className="inline-flex justify-center items-center border-2 h-14 w-14 rounded-full !mt-14 md:!mt-20">
             <FaPlay />
           </div> */}

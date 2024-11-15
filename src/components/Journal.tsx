@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Img1 from "../../public/mainbot/01.jpg";
 import Img2 from "../../public/mainbot/02.jpg";
 import Img3 from "../../public/mainbot/03.jpg";
@@ -20,6 +20,7 @@ import Img16 from "../../public/mainbot/16.jpg";
 import { motion } from "framer-motion";
 import { SlideUp } from "../utility/animation";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 
 const JournalData = [
   {
@@ -185,62 +186,116 @@ const JournalData = [
 ];
 
 const Journal = () => {
-  return (
-    <>
-      <section className=" container mt-40" id="journal">
-        {/* header section  */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2, delay: 0.2 }}
-          className="text-center md:max-w-[650px] mx-auto space-y-4 "
-        >
-          <p className="text-3xl">Галерея наших работ</p>
-          <p>
-            Ознакомьтесь с примерами нашей работы: от изящной персонализации
-            подарков до точной гравировки сложных узоров. Каждый проект — это
-            уникальный подход и высокое качество, которые мы рады предложить
-            каждому клиенту.
-          </p>
-        </motion.div>
+  const [currentIndex, setCurrentIndex] = useState(0); // Состояние текущего слайда
 
-        {/* card section */}
-        <div className=" grid grid-cols-1 md:grid-cols-4 gap-14  mt-20">
-          {JournalData.map((data) => {
-            const { ref, inView } = useInView({
-              threshold: 0.01, // Анимация сработает, когда 10% элемента будут видимы
-              triggerOnce: true, // Анимация сработает только один раз
-            });
-            return (
-              <motion.div
-                ref={ref}
-                initial="hidden"
-                animate={inView ? "visible" : "hidden"}
-                variants={SlideUp(data.delay)}
-                key={data.id}
-              >
-                <div className=" overflow-hidden">
-                  <motion.img
+  // Функция для перехода к следующему слайду
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % JournalData.length);
+  };
+
+  // Функция для перехода к предыдущему слайду
+  const prevSlide = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + JournalData.length) % JournalData.length
+    );
+  };
+
+  return (
+    <section className="container mt-40" id="journal">
+      {/* header section */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2, delay: 0.2 }}
+        className="text-center md:max-w-[650px] mx-auto space-y-4"
+      >
+        <p className="md:text-3xl text-xl">Галерея наших работ</p>
+        <p className=" text-[14px]">
+          Ознакомьтесь с примерами нашей работы: от изящной персонализации
+          подарков до точной гравировки сложных узоров. Каждый проект — это
+          уникальный подход и высокое качество, которые мы рады предложить
+          каждому клиенту.
+        </p>
+      </motion.div>
+
+      {/* card section */}
+      <div className="relative" id="galery">
+        <motion.div
+          className="overflow-hidden"
+          initial={{ x: "-100%" }}
+          animate={{ x: 0 }}
+          transition={{ duration: 1 }}
+        >
+          {/* Слайдер для мобильных устройств */}
+          <div className="block md:hidden">
+            <motion.div
+              className="flex"
+              animate={{ x: -currentIndex * 100 + "%" }}
+              transition={{ duration: 0.5 }}
+            >
+              {JournalData.map((data, index) => (
+                <motion.div
+                  className="relative w-full flex-shrink-0 mt-4  "
+                  key={data.id}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 1.5 }}
+                >
+                  <Image
                     src={data.image}
                     alt={data.title}
-                    whileTap={{ scale: 1.5 }}
-                    className=" w-full h-[250px] md:h-[350px] object-cover"
+                    width={350}
+                    height={150}
+                    className="object-cover rounded-3xl"
+                    layout="intrinsic"
                   />
-                </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
 
-                {/* <div className=" space-y-1 py-6 text-center px-12"> */}
-                {/* <p className=" uppercase">{data.date}</p> */}
-                {/* <p className=" text-xl font-semibold font-merriweather">
-                    {data.title}
-                  </p> */}
-                {/* <p className="!mt-8">{data.about}</p> */}
-                {/* </div> */}
+          {/* Кнопки управления слайдами */}
+          <button
+            className="absolute top-1/2 left-0 transform -translate-y-1/2  text-black font-bold p-2"
+            onClick={prevSlide}
+          >
+            ←
+          </button>
+          <button
+            className="absolute top-1/2 right-0 transform -translate-y-1/2 text-black font-bold p-2"
+            onClick={nextSlide}
+          >
+            →
+          </button>
+        </motion.div>
+
+        {/* Grid для больших экранов */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-4 gap-14 mt-20">
+          {JournalData.map((data) => {
+            return (
+              <motion.div
+                key={data.id}
+                initial="hidden"
+                animate="visible"
+                variants={SlideUp(data.delay)}
+              >
+                <div className="overflow-hidden relative w-full h-[350px]">
+                  <motion.div whileTap={{ scale: 1.1 }}>
+                    <Image
+                      src={data.image}
+                      alt={data.title}
+                      width={350}
+                      height={250}
+                      className="object-cover h-[250px]"
+                      layout="responsive"
+                    />
+                  </motion.div>
+                </div>
               </motion.div>
             );
           })}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

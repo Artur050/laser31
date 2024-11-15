@@ -7,7 +7,7 @@ import { FaPhone } from "react-icons/fa"; // Убедитесь, что вы у�
 const PhoneButton = () => {
   return (
     <motion.a
-      href="tel:+1234567890" // Замените на нужный номер телефона
+      href="tel:+7-995-018-09-90" // Замените на нужный номер телефона
       className="fixed z-50 bottom-10 right-4 bg-brandBlue text-white rounded-full p-4 shadow-md"
       initial={{ scale: 1 }}
       whileHover={{ scale: 1.1 }}
