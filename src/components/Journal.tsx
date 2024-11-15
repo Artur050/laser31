@@ -21,6 +21,7 @@ import { motion } from "framer-motion";
 import { SlideUp } from "../utility/animation";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
+import { VscArrowLeft, VscArrowRight } from "react-icons/vsc";
 
 const JournalData = [
   {
@@ -221,7 +222,7 @@ const Journal = () => {
       {/* card section */}
       <div className="relative" id="galery">
         <motion.div
-          className="overflow-hidden"
+          className="overflow-hidden w-full"
           initial={{ x: "-100%" }}
           animate={{ x: 0 }}
           transition={{ duration: 1 }}
@@ -229,7 +230,7 @@ const Journal = () => {
           {/* Слайдер для мобильных устройств */}
           <div className="block md:hidden">
             <motion.div
-              className="flex"
+              className="flex text-center"
               animate={{ x: -currentIndex * 100 + "%" }}
               transition={{ duration: 0.5 }}
             >
@@ -246,7 +247,7 @@ const Journal = () => {
                     width={350}
                     height={150}
                     className="object-cover rounded-3xl"
-                    layout="intrinsic"
+                    layout="responsive"
                   />
                 </motion.div>
               ))}
@@ -255,16 +256,16 @@ const Journal = () => {
 
           {/* Кнопки управления слайдами */}
           <button
-            className="absolute top-1/2 left-0 transform -translate-y-1/2  text-black font-bold p-2"
+            className="absolute top-1/2 left-0 transform -translate-y-1/2  text-black font-bold p-2 z-10"
             onClick={prevSlide}
           >
-            ←
+            <VscArrowLeft className="text-4xl  text-white" />
           </button>
           <button
-            className="absolute top-1/2 right-0 transform -translate-y-1/2 text-black font-bold p-2"
+            className="absolute top-1/2 right-0 transform -translate-y-1/2 text-black font-bold p-2 z-10"
             onClick={nextSlide}
           >
-            →
+            <VscArrowRight className="text-4xl text-white" />
           </button>
         </motion.div>
 
