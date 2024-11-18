@@ -6,25 +6,25 @@ import { motion } from "framer-motion";
 import { FaTelegram, FaWhatsapp, FaVk } from "react-icons/fa";
 import Image from "next/image";
 
-const bgImg = {
-  backgroundImage: `url(${FooterImg.src})`,
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "center",
-  backgroundSize: "cover",
-};
-
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
+    if (typeof window !== "undefined") {
+      const mediaQuery = window.matchMedia("(max-width: 768px)");
 
-    window.addEventListener("resize", handleResize);
-    handleResize();
+      const handleResize = () => {
+        setIsMobile(mediaQuery.matches);
+      };
 
-    return () => window.removeEventListener("resize", handleResize);
+      // Устанавливаем начальное значение
+      handleResize();
+
+      // Добавляем слушателя изменений
+      mediaQuery.addEventListener("change", handleResize);
+
+      return () => mediaQuery.removeEventListener("change", handleResize);
+    }
   }, []);
 
   return (
@@ -39,10 +39,10 @@ const Footer = () => {
       <div className="absolute inset-0">
         <Image
           src={FooterImg}
-          alt="Footer Background"
-          layout="fill"
-          objectFit="cover"
-          objectPosition={isMobile ? "center" : "20% 20%"}
+          alt="Лазер 31"
+          fill
+          className="object-cover"
+          style={{ objectPosition: isMobile ? "center" : "20% 20%" }}
         />
       </div>
       {/* Radial overlay */}
@@ -56,13 +56,13 @@ const Footer = () => {
 
       {/* Company information */}
       <div className="relative z-20 mb-6 text-center">
-        {/* <div className="mb-4">
+        <div className="mb-4">
           <h2 className="text-2xl md:text-3xl font-bold">ЛАЗЕР 31</h2>
           <p className="text-sm md:text-xl mt-1 font-bold">
             Профессиональная лазерная гравировка на металле, дереве, стекле и
             других материалах.
           </p>
-        </div> */}
+        </div>
         <div className="text-sm md:text-xl mb-4 font-bold">
           <p>
             Белгородская область г.Губкин ул.Дзержинского 113 ,пав.102 , пав.108

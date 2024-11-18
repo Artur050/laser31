@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.laser-31.ru/
+
+# Sitemaps
+Sitemap: https://www.laser-31.ru/sitemap.xml

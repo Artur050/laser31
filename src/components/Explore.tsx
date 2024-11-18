@@ -48,7 +48,7 @@ const ExploreData = [
 const Explore = () => {
   return (
     <>
-      <section className=" container" id="explore">
+      <main className=" container" id="explore">
         {/* header section */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -56,8 +56,8 @@ const Explore = () => {
           transition={{ duration: 2, delay: 0.2 }}
           className="text-center md:max-w-[650px] mx-auto space-y-4 "
         >
-          <p className="text-3xl">Лазерная гравировка от Лазер 31</p>
-          <p className=" mt-3 mb-5">
+          <h3 className="text-3xl">Лазерная гравировка от Лазер 31</h3>
+          <h4 className=" mt-3 mb-5">
             Вы хотите добавить индивидуальность и уникальность своим предметам?
             Представляем вам возможность лазерной гравировки - современный
             способ придать вашим изделиям неповторимый стиль и оставить
@@ -65,7 +65,7 @@ const Explore = () => {
             лазерной гравировке: наносим тексты и изображения любой сложности на
             различные предметы и материалы. Мы предлагаем качественную лазерную
             гравировку по доступной цене.
-          </p>
+          </h4>
         </motion.div>
         {/* card section */}
         <div className=" mt-20 md:flex grid-cols-2 gap-x-3 gap-6 place-items-center">
@@ -92,15 +92,15 @@ const Explore = () => {
                 />
                 <div className=" absolute w-full mb-5 bottom-0 inset-0 bg-brandDark/15">
                   <div className=" h-full space-y-1 py-6 flex flex-col justify-center text-center items-center">
-                    <h3 className="text-xl font-semibold">{data.title}</h3>
-                    <p className=" uppercase">{data.place}</p>
+                    <h5 className="text-xl font-semibold">{data.title}</h5>
+                    <h6 className=" uppercase">{data.place}</h6>
                   </div>
                 </div>
               </motion.div>
             );
           })}
         </div>
-      </section>
+      </main>
     </>
   );
 };

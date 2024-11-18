@@ -30,9 +30,6 @@ const Hero = () => {
             <LaserText text="Лазер 31" />
           </h1>
           <h2>Лазерная гравировка на различных материалах и изделиях</h2>
-          {/* <div className="inline-flex justify-center items-center border-2 h-14 w-14 rounded-full !mt-14 md:!mt-20">
-            <FaPlay />
-          </div> */}
         </motion.div>
       </section>
     </>

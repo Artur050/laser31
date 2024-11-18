@@ -26,9 +26,7 @@ import { VscArrowLeft, VscArrowRight } from "react-icons/vsc";
 const JournalData = [
   {
     id: 1,
-    title: "An Unforgattable",
-    about:
-      "If you only have one day to visit yosemite National Park and you want to make the out of it.",
+    title: "гравирока цепочек",
     date: "May 30, 2022",
     url: "#",
     image: Img1.src,
@@ -36,9 +34,7 @@ const JournalData = [
   },
   {
     id: 2,
-    title: "Symphonies in Steel",
-    about:
-      "Crossing the Golden Gate Bridge from San Francisco, you arrive in march even before landing on told ground.",
+    title: "гравировка афганского казана ",
     date: "April 30, 2021",
     url: "#",
     image: Img2.src,
@@ -46,9 +42,7 @@ const JournalData = [
   },
   {
     id: 3,
-    title: "An Unforgattable",
-    about:
-      "If you only have one day to visit yosemite National Park and you want to make the out of it.",
+    title: "гравировка ошейника",
     date: "May 30, 2022",
     url: "#",
     image: Img3.src,
@@ -56,9 +50,7 @@ const JournalData = [
   },
   {
     id: 4,
-    title: "Symphonies in Steel",
-    about:
-      "Crossing the Golden Gate Bridge from San Francisco, you arrive in march even before landing on told ground.",
+    title: "гравировка замков",
     date: "April 30, 2021",
     url: "#",
     image: Img4.src,
@@ -66,9 +58,7 @@ const JournalData = [
   },
   {
     id: 5,
-    title: "An Unforgattable",
-    about:
-      "If you only have one day to visit yosemite National Park and you want to make the out of it.",
+    title: "гравировка бэйджиков",
     date: "May 30, 2022",
     url: "#",
     image: Img5.src,
@@ -76,9 +66,7 @@ const JournalData = [
   },
   {
     id: 6,
-    title: "Symphonies in Steel",
-    about:
-      "Crossing the Golden Gate Bridge from San Francisco, you arrive in march even before landing on told ground.",
+    title: "гравировка термосов",
     date: "April 30, 2021",
     url: "#",
     image: Img6.src,
@@ -86,9 +74,7 @@ const JournalData = [
   },
   {
     id: 7,
-    title: "An Unforgattable",
-    about:
-      "If you only have one day to visit yosemite National Park and you want to make the out of it.",
+    title: "гравировка бумажников",
     date: "May 30, 2022",
     url: "#",
     image: Img7.src,
@@ -96,9 +82,7 @@ const JournalData = [
   },
   {
     id: 8,
-    title: "Symphonies in Steel",
-    about:
-      "Crossing the Golden Gate Bridge from San Francisco, you arrive in march even before landing on told ground.",
+    title: "гравировка кубков",
     date: "April 30, 2021",
     url: "#",
     image: Img8.src,
@@ -106,9 +90,7 @@ const JournalData = [
   },
   {
     id: 9,
-    title: "An Unforgattable",
-    about:
-      "If you only have one day to visit yosemite National Park and you want to make the out of it.",
+    title: "гравировка кулонов",
     date: "May 30, 2022",
     url: "#",
     image: Img9.src,
@@ -116,9 +98,7 @@ const JournalData = [
   },
   {
     id: 10,
-    title: "Symphonies in Steel",
-    about:
-      "Crossing the Golden Gate Bridge from San Francisco, you arrive in march even before landing on told ground.",
+    title: "гравировка ножей",
     date: "April 30, 2021",
     url: "#",
     image: Img10.src,
@@ -126,9 +106,7 @@ const JournalData = [
   },
   {
     id: 11,
-    title: "An Unforgattable",
-    about:
-      "If you only have one day to visit yosemite National Park and you want to make the out of it.",
+    title: "гравировка ножа",
     date: "May 30, 2022",
     url: "#",
     image: Img11.src,
@@ -136,9 +114,7 @@ const JournalData = [
   },
   {
     id: 12,
-    title: "Symphonies in Steel",
-    about:
-      "Crossing the Golden Gate Bridge from San Francisco, you arrive in march even before landing on told ground.",
+    title: "гравировка трубы",
     date: "April 30, 2021",
     url: "#",
     image: Img12.src,
@@ -146,9 +122,7 @@ const JournalData = [
   },
   {
     id: 13,
-    title: "An Unforgattable",
-    about:
-      "If you only have one day to visit yosemite National Park and you want to make the out of it.",
+    title: "гравировка металлической кружки",
     date: "May 30, 2022",
     url: "#",
     image: Img13.src,
@@ -156,9 +130,7 @@ const JournalData = [
   },
   {
     id: 14,
-    title: "Symphonies in Steel",
-    about:
-      "Crossing the Golden Gate Bridge from San Francisco, you arrive in march even before landing on told ground.",
+    title: "гравировка зажигалки",
     date: "April 30, 2021",
     url: "#",
     image: Img14.src,
@@ -166,9 +138,7 @@ const JournalData = [
   },
   {
     id: 15,
-    title: "An Unforgattable",
-    about:
-      "If you only have one day to visit yosemite National Park and you want to make the out of it.",
+    title: "гравировка термокружки",
     date: "May 30, 2022",
     url: "#",
     image: Img15.src,
@@ -176,9 +146,7 @@ const JournalData = [
   },
   {
     id: 16,
-    title: "Symphonies in Steel",
-    about:
-      "Crossing the Golden Gate Bridge from San Francisco, you arrive in march even before landing on told ground.",
+    title: "гравировка часов",
     date: "April 30, 2021",
     url: "#",
     image: Img16.src,
@@ -210,13 +178,13 @@ const Journal = () => {
         transition={{ duration: 2, delay: 0.2 }}
         className="text-center md:max-w-[650px] mx-auto space-y-4"
       >
-        <p className="md:text-3xl text-xl">Галерея наших работ</p>
-        <p className=" text-[14px]">
+        <h5 className="md:text-3xl text-xl">Галерея наших работ</h5>
+        <h5 className=" text-[14px]">
           Ознакомьтесь с примерами нашей работы: от изящной персонализации
           подарков до точной гравировки сложных узоров. Каждый проект — это
           уникальный подход и высокое качество, которые мы рады предложить
           каждому клиенту.
-        </p>
+        </h5>
       </motion.div>
 
       {/* card section */}
@@ -247,7 +215,7 @@ const Journal = () => {
                     width={350}
                     height={150}
                     className="object-cover rounded-3xl"
-                    layout="responsive"
+                    style={{ objectFit: "cover", borderRadius: "1.5rem" }}
                   />
                 </motion.div>
               ))}
@@ -286,8 +254,8 @@ const Journal = () => {
                       alt={data.title}
                       width={350}
                       height={250}
-                      className="object-cover h-[250px]"
-                      layout="responsive"
+                      className="object-cover w-full h-[250px]"
+                      style={{ objectFit: "cover" }}
                     />
                   </motion.div>
                 </div>
