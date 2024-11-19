@@ -28,7 +28,7 @@ export default function Home() {
               streetAddress: "ул. Дзержинского, 113, пав. 102, пав. 108",
               addressLocality: "Губкин",
               addressRegion: "Белгородская область",
-              postalCode: "укажите_почтовый_индекс",
+              postalCode: "309181",
               addressCountry: "Россия",
             },
             contactPoint: {
