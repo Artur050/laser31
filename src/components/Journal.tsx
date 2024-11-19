@@ -224,13 +224,13 @@ const Journal = () => {
 
           {/* Кнопки управления слайдами */}
           <button
-            className="absolute top-1/2 left-0 transform -translate-y-1/2  text-black font-bold p-2 z-10"
+            className="absolute top-1/2 left-0 transform -translate-y-1/2  text-black font-bold p-2 z-10 md:hidden"
             onClick={prevSlide}
           >
             <VscArrowLeft className="text-4xl  text-white" />
           </button>
           <button
-            className="absolute top-1/2 right-0 transform -translate-y-1/2 text-black font-bold p-2 z-10"
+            className="absolute top-1/2 right-0 transform -translate-y-1/2 text-black font-bold p-2 z-10 md:hidden"
             onClick={nextSlide}
           >
             <VscArrowRight className="text-4xl text-white" />
